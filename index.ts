@@ -3,11 +3,15 @@ import { WebSocket, WebSocketServer } from 'ws'
 
 const app = express()
 
-app.get("/",(req,res)=>{
-  return res.json({msg:"done"})
+app.get("/test",(req,res)=>{
+  return res.json({msg:"get"})
 })
 
-const httpServer = app.listen(8080)
+
+app.post("/test",(req,res)=>{
+  return res.json({msg:"post"})
+})
+app.listen(8080)
 
 // const wss = new WebSocketServer({ server: httpServer });
 
