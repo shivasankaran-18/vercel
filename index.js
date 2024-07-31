@@ -11,3 +11,4 @@ app.get("/test",(req,res)=>{
 app.post("/test",(req,res)=>{
   return res.json({msg:"post"})
 })
+app.listen(3000)
